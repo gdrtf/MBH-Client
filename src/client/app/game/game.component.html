@@ -1,0 +1,37 @@
+<div *ngIf="game">
+  <div class="ui-g">
+    <div class="ui-g-5 column">
+      <h1>{{ game.HomeTeam.Name }}</h1>
+      <img src="{{ game.HomeTeam.Logo }}"/>
+    </div>
+    <div class="ui-g-2 column center">
+        <div class="game-detail">{{ game.League }} - {{ game.Season }}</div>
+        <div class="game-detail">{{ game.Stage }}</div>
+        <div class="game-detail">{{ game.Date }}</div>
+    </div>
+    <div class="ui-g-5 column">
+      <h1>{{ game.AwayTeam.Name }}</h1>
+      <img src="{{ game.AwayTeam.Logo }}"/>
+    </div>
+  </div>
+
+  <div class="ui-g">
+    <div class="ui-g-12 column">
+      <h3>Winning percentage</h3>
+    </div>
+  </div>
+
+  <div class="ui-g">
+    <div class="ui-g-2">&nbsp;</div>
+    <div class="ui-g-1 column">
+      <h3>{{ game.HomeWP }}%</h3>
+    </div>
+    <div class="ui-g-6 column bar">
+      <p-progressBar [value]="game.HomeWP" [showValue]=false></p-progressBar>
+    </div>
+    <div class="ui-g-1 column">
+      <h3>{{ game.AwayWP }}%</h3>
+    </div>
+    <div class="ui-g-2">&nbsp;</div>
+  </div>
+</div>
